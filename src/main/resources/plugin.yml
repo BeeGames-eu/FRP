@@ -1,0 +1,20 @@
+name: FRP
+version: '${project.version}'
+main: tev.frp.FRP
+authors: [ Tevuori ]
+
+commands:
+  repair:
+    description: Toto vám za malý poplatek 50. coinů opraví vaše vypavení.
+  gms:
+    description: Toto vám změní gamemode na survival.
+  gma:
+    description: Toto vám změní gamemode na adventurer.
+  gmc:
+    description: Toto vám změní gamemode na creative.
+  gmsp:
+    description: Toto vám změní gamemode na spectator.
+  v:
+    description: Toto vás uvede do vanishe
+  spawn:
+    description: Toto vás teleportuje na spawn.
