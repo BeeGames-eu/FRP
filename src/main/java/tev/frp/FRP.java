@@ -18,6 +18,7 @@ public final class FRP extends JavaPlugin {
         getCommand("fly").setExecutor(new Fly());
         getServer().getPluginManager().registerEvents(new onDeathEvent(), this);
         getServer().getPluginManager().registerEvents(new onJoinLeaveEvent(), this);
+        getServer().getPluginManager().registerEvents(new tphereblock_event(), this);
     }
 
     @Override
