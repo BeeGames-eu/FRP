@@ -9,6 +9,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
+
+import java.util.Map;
 
 public class onDeathEvent implements Listener {
     @EventHandler
@@ -27,6 +31,20 @@ public class onDeathEvent implements Listener {
                 meta.setDisplayName(ChatColor.RED + "Switch!");
                 snowball.setItemMeta(meta);
                 killer.getInventory().addItem(snowball);
+                break;
+            case "Assassin":
+                PotionEffect regen = new PotionEffect(PotionEffectType.REGENERATION, 70, 4);
+                killer.addPotionEffect(regen);
+                break;
+            case "Tank":
+                PotionEffect sila = new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 250, 0);
+                PotionEffect degenerace = new PotionEffect(PotionEffectType.ABSORPTION, 250, 4);
+                PotionEffect slow = new PotionEffect(PotionEffectType.SLOW, 250, 1);
+                PotionEffect resistence = new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 250, 0);
+                killer.addPotionEffect(sila);
+                killer.addPotionEffect(degenerace);
+                killer.addPotionEffect(slow);
+                killer.addPotionEffect(resistence);
                 break;
         }
     }

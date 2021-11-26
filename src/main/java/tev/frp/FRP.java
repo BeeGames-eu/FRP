@@ -14,9 +14,10 @@ public final class FRP extends JavaPlugin {
         getCommand("gmc").setExecutor(new gmc());
         getCommand("gms").setExecutor(new gms());
         getCommand("gmsp").setExecutor(new gmsp());
-        getCommand("v").setExecutor(new v());
         getCommand("spawn").setExecutor(new spawn());
+        getCommand("fly").setExecutor(new Fly());
         getServer().getPluginManager().registerEvents(new onDeathEvent(), this);
+        getServer().getPluginManager().registerEvents(new onJoinLeaveEvent(), this);
     }
 
     @Override
